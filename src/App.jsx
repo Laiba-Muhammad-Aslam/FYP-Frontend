@@ -8,9 +8,9 @@ import WorkspaceFeatures from './components/WorkspaceFeatures'
 import CTA from './components/CTA'
 import TeamUp from './components/TeamUp'
 import TeamSection from './components/TeamSection'
+import Collaboration from './components/Collaboration'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
     <Hero/>
     <Features/>
     <WorkspaceFeatures/>
+    <Collaboration/>
     <TeamUp/>
     <CTA/>
     <TeamSection/>

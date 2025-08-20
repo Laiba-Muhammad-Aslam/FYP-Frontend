@@ -1,5 +1,6 @@
 import React from 'react'
 import WorkspaceFeaturesCard from './WorkspaceFeaturesCard'
+import { ChevronRight } from 'lucide-react';
 
 export default function WorkspaceFeatures() {
   return (
@@ -16,7 +17,7 @@ export default function WorkspaceFeatures() {
            
         </div>
 
-        <button className='bg-blue-800 py-2 text-white font-medium rounded-md px-5'>Get Started for free</button>
+        <button className='cursor-pointer flex bg-blue-700 hover:bg-blue-800 transition py-2 text-white font-medium rounded-md px-5'>Get Started for free <ChevronRight /></button>
     </section>
   )
 }

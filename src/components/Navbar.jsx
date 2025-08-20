@@ -28,12 +28,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+    <nav className="border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 bg-[#ffffff]">
       {/* Logo */}
-      <div className="text-blue-800 font-bold text-2xl">Julius</div>
+      <div className="text-blue-800 font-bold text-2xl cursor-pointer">Julius</div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-6 font-medium text-[#404040]">
+      <ul className="hidden md:flex items-center gap-6 font-[600] text-[#404040]">
         <li className="cursor-pointer hover:text-blue-700">Product</li>
         <li className="cursor-pointer hover:text-blue-700">Use Cases</li>
         <li className="cursor-pointer hover:text-blue-700">Resources</li>
@@ -44,7 +44,7 @@ export default function Navbar() {
 
       {/* Desktop Button */}
       <div className="hidden md:block">
-        <button className="bg-blue-700 font-medium text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">
+        <button className="cursor-pointer bg-blue-700 font-medium text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">
           Sign Up
         </button>
       </div>
