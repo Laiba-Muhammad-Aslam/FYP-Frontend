@@ -5,9 +5,9 @@ export default function CollaborationCard() {
   return (
     <div className=' flex md:flex-row flex-col items-center justify-center p-5 md:p-10 bg-blue-50'>
       <div className=' w-[100%] md:w-[50%] p-5 md:p-10'>
-        <h2 className='font-bold text-xl md:text-3xl'>Flexible building blocks</h2>
-        <p className='text-[#404040] font-medium py-1 md:py-3'>Add, remove, or edit analysis steps as you work.</p>
-        <button className='flex hover:bg-gray-200 transition'>Try Now <ChevronRight /></button>
+        <h2 className='font-bold text-xl md:text-[36px] text-[#404040] md:max-w-80'>Flexible building blocks</h2>
+        <p className='text-[#64748B] font-medium md:font-[600] py-1 md:py-3 md:max-w-70'>Add, remove, or edit analysis steps as you work.</p>
+        <button className='flex justify-center items-center font-semibold hover:bg-gray-200 transition md:text-[14px]'>Try Now <ChevronRight size={20}/></button>
       </div>
       <div className='w-[100%] md:w-[50%] p-5 md:p-10'>
         <img className='w-[100%]' src="https://wpdatatables.com/wp-content/uploads/2020/08/chart5.jpg" alt="" />
