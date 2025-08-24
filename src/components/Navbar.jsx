@@ -91,28 +91,44 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="text-[#2563eb] font-bold text-xl cursor-pointer">
-            Julius
+            <img
+              src={'src/assets/logo_black.svg'}
+              alt="Julius Logo"
+              className="h-8 w-auto" // Adjust height as needed
+            />
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 font-semibold text-gray-700">
-            <a href="#" className="hover:text-blue-700">Product</a>
-            <a href="#" className="hover:text-blue-700">Use Cases</a>
-            <a href="#" className="hover:text-blue-700">Resources</a>
-            <a href="#" className="hover:text-blue-700">Security</a>
-            <a href="#" className="hover:text-blue-700">Community</a>
-            <a href="#" className="hover:text-blue-700">Pricing</a>
+          <div className="hidden lg:flex items-center space-x-8 font-semibold text-gray-700">
+            <a href="#" className="hover:text-blue-700">
+              Product
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Use Cases
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Resources
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Security
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Community
+            </a>
+            <a href="#" className="hover:text-blue-700">
+              Pricing
+            </a>
           </div>
 
           {/* Desktop Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <button className="bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
               Sign Up
             </button>
           </div>
 
           {/* Mobile Hamburger */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none text-gray-700"
@@ -136,12 +152,48 @@ export default function Navbar() {
 
           {/* Menu Items */}
           <div className="flex flex-col items-center justify-center flex-1 gap-6 text-lg font-medium text-gray-700">
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Product</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Use Cases</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Resources</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Security</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Community</a>
-            <a href="#" onClick={() => setIsOpen(false)} className="hover:text-blue-700">Pricing</a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Product
+            </a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Use Cases
+            </a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Resources
+            </a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Security
+            </a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Community
+            </a>
+            <a
+              href="#"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-blue-700"
+            >
+              Pricing
+            </a>
 
             <button className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
               Sign Up

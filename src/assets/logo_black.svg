@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="264"
+   height="66"
+   viewBox="0 0 264 66"
+   fill="none"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="volt-ai-logo-white.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.7045455"
+     inkscape:cx="141.98773"
+     inkscape:cy="51.96319"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5" />
+  <g
+     clip-path="url(#clip0_5469_30869)"
+     id="g5"
+     transform="translate(0,-14.809816)">
+    <path
+       d="M 127.542,25.0767 H 117.255 L 105.724,48.8561 94.2575,25.0767 H 84.022 l 21.702,44.0432 z"
+       fill="#0e1520"
+       id="path1" />
+    <path
+       d="m 156.85,25.0638 c -12.568,0 -22.778,9.9244 -22.778,22.0541 0,12.1297 10.21,22.054 22.778,22.054 12.567,0 22.893,-9.8594 22.893,-22.054 0,-12.1946 -10.248,-22.0541 -22.893,-22.0541 z m 0,35.7406 c -2.705,0 -5.349,-0.8025 -7.598,-2.3061 -2.249,-1.5036 -4.002,-3.6409 -5.039,-6.1419 -1.037,-2.5009 -1.31,-5.2535 -0.785,-7.9098 0.525,-2.6564 1.824,-5.0975 3.733,-7.0149 1.91,-1.9174 4.344,-3.2253 6.996,-3.7582 2.651,-0.533 5.401,-0.2673 7.901,0.7636 2.501,1.031 4.641,2.7808 6.149,5.0285 1.508,2.2478 2.317,4.8926 2.324,7.6004 -0.043,3.6234 -1.497,7.0867 -4.053,9.6527 -2.555,2.5659 -6.01,4.0319 -9.628,4.0857 z"
+       fill="#0e1520"
+       id="path2" />
+    <path
+       d="m 226.14,61.0377 h -22.518 v -35.961 h -9.354 v 44.0302 h 31.872 z"
+       fill="#0e1520"
+       id="path3" />
+    <path
+       d="m 263.221,33.2109 v -8.0692 h -34.347 v 8.0692 h 12.529 v 35.8443 h 9.341 V 33.2109 Z"
+       fill="#0e1520"
+       id="path4" />
+    <path
+       d="M 72.9701,18.9665 H 15.2885 L 13.3321,15.5287 H 0 l 26.6901,46.2746 2.1507,3.7362 -1.9564,3.3989 6.6596,11.5589 20.7301,-35.974 8.0977,-14.0498 h 3.8869 L 72.9183,18.9276 Z M 30.0198,56.0692 33.3496,50.2833 18.6183,24.7395 h 4.3144 l 3.3298,5.773 h 29.4627 l -2.1507,3.7362 H 46.9149 L 32.1706,59.8054 Z"
+       fill="#2584ff"
+       id="path5" />
+  </g>
+  <defs
+     id="defs5">
+    <clipPath
+       id="clip0_5469_30869">
+      <rect
+         width="263.01401"
+         height="96"
+         fill="#ffffff"
+         id="rect5"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
+</svg>
