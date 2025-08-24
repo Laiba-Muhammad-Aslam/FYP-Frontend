@@ -2,10 +2,10 @@ import React from 'react'
 
 export default function WorkspaceFeaturesCard({imgUrl, title, desc}) {
   return (
-    <div className=' bg-blue-50 w-80 p-5 md:p-3 rounded-2xl md:mx-5'>
-      <img src={imgUrl} alt="" />
-      <h1 className='text-[16px] text-[#404040] md:text-[18px] font-semibold pt-3 md:pt-5'> {title}</h1>
-      <p className='text-[#64748B] md:text-[16px] font-[400]'> {desc}</p>
+    <div className=' bg-blue-50 flex flex-col p-6 rounded-2xl shadow-sm w-full h-full'>
+      <img src={imgUrl} className="w-full object-contain rounded-lg" alt={title}/>
+      <h1 className='text-lg md:text-xl text-[#404040] font-semibold pt-4 text-start'> {title}</h1>
+      <p className='text-[#64748B] text-sm md:text-base mt-2 text-start'> {desc}</p>
     </div>
   )
 }
