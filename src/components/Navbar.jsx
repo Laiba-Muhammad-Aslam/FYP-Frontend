@@ -1,84 +1,3 @@
-// import React, { useState } from "react";
-// import { Menu, X } from "lucide-react"; // icons for hamburger & close
-
-// export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <nav className="border-b border-gray-200 px-4 py-3 flex items-center justify-between sticky top-0 bg-[#ffffff]">
-//       {/* Logo */}
-//       <div className="text-[#2563eb] font-bold md:text-[24px] text-[19px] cursor-pointer">Julius</div>
-
-//       {/* Desktop Menu */}
-//       <ul className="hidden md:flex items-center md:text-[14px] gap-6 font-[600] text-[#404040]">
-//         <li className="cursor-pointer hover:text-blue-700">Product</li>
-//         <li className="cursor-pointer hover:text-blue-700">Use Cases</li>
-//         <li className="cursor-pointer hover:text-blue-700">Resources</li>
-//         <li className="cursor-pointer hover:text-blue-700">Security</li>
-//         <li className="cursor-pointer hover:text-blue-700">Community</li>
-//         <li className="cursor-pointer hover:text-blue-700">Pricing</li>
-//       </ul>
-
-//       {/* Desktop Button */}
-//       <div className="hidden md:block">
-//         <button className="cursor-pointer bg-[#2563eb] font-medium text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">
-//           Sign Up
-//         </button>
-//       </div>
-
-//       {/* Hamburger Button (Mobile) */}
-//       <div className="md:hidden">
-//         <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
-//           {isOpen ? <X size={28} /> : <Menu size={28} />}
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {/* {isOpen && (
-//         <div className="text-[#404040] absolute top-16 left-0 w-full bg-white shadow-md border-t border-gray-200 flex flex-col items-center gap-4 py-6 font-medium md:hidden z-50">
-//           <li className="list-none cursor-pointer hover:text-blue-700">Product</li>
-//           <li className="list-none cursor-pointer hover:text-blue-700">Use Cases</li>
-//           <li className="list-none cursor-pointer hover:text-blue-700">Resources</li>
-//           <li className="list-none cursor-pointer hover:text-blue-700">Security</li>
-//           <li className="list-none cursor-pointer hover:text-blue-700">Community</li>
-//           <li className="list-none cursor-pointer hover:text-blue-700">Pricing</li>
-
-//           <button className="bg-[#2563eb] font-medium text-white px-4 py-2 rounded-md hover:bg-blue-800 transition">
-//             Sign Up
-//           </button>
-//         </div>
-//       )} */}
-
-// {/* Mobile Menu */}
-// {isOpen && (
-//   <div className="fixed inset-0 bg-white flex flex-col z-50">
-//     <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-//       <div className="text-[#2563eb] font-bold text-[20px]">Julius</div>
-//       <button onClick={() => setIsOpen(false)} className="focus:outline-none">
-//         <X size={28} />
-//       </button>
-//     </div>
-
-//     <div className="flex flex-col items-center justify-center flex-1 gap-6 font-medium text-[#404040]">
-//       <li className="list-none cursor-pointer hover:text-blue-700">Product</li>
-//       <li className="list-none cursor-pointer hover:text-blue-700">Use Cases</li>
-//       <li className="list-none cursor-pointer hover:text-blue-700">Resources</li>
-//       <li className="list-none cursor-pointer hover:text-blue-700">Security</li>
-//       <li className="list-none cursor-pointer hover:text-blue-700">Community</li>
-//       <li className="list-none cursor-pointer hover:text-blue-700">Pricing</li>
-
-//       <button className="bg-[#2563eb] font-medium text-white px-6 py-3 rounded-md hover:bg-blue-800 transition">
-//         Sign Up
-//       </button>
-//     </div>
-//   </div>
-// )}
-
-//     </nav>
-//   );
-// }
-
-
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -168,6 +87,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="focus:outline-none text-gray-700"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -175,82 +96,73 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (full screen) */}
-      {isOpen && (
-        <div className="fixed inset-0 bg-white flex flex-col z-40">
-          {/* Header inside menu */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <div className="text-[#2563eb] font-bold text-xl">
-              <img
-                src={"src/assets/logo_black.svg"}
-                alt="Volt AI Logo"
-                className="h-8 w-auto" // Adjust height as needed
-              />
-            </div>
-            <button onClick={() => setIsOpen(false)}>
-              <X size={28} />
-            </button>
+      {/* Mobile Menu (animated fade-down) */}
+      <div
+        id="mobile-menu"
+        className={`fixed inset-0 z-40 bg-white flex flex-col transition-all duration-300 ease-out ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+        aria-hidden={!isOpen}
+      >
+        {/* Header inside menu */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+          <div className="text-[#2563eb] font-bold text-xl">
+            <img
+              src={"src/assets/logo_black.svg"}
+              alt="Volt AI Logo"
+              className="h-8 w-auto"
+            />
           </div>
-
-          {/* Menu Items */}
-          <div className="flex flex-col items-center justify-center flex-1 gap-6 text-lg font-medium text-gray-700">
-            <a
-              href="#features"
-              onClick={(e) => {
-                scrollToSection(e, "features");
-                setIsOpen(false);
-              }}
-              className="hover:text-blue-700"
-            >
-              Features
-            </a>
-            <a
-              href="#discover"
-              onClick={(e) => {
-                scrollToSection(e, "discover");
-                setIsOpen(false);
-              }}
-              className="hover:text-blue-700"
-            >
-              Discover
-            </a>
-            <a
-              href="#workspace"
-              onClick={(e) => {
-                scrollToSection(e, "workspace");
-                setIsOpen(false);
-              }}
-              className="hover:text-blue-700"
-            >
-              Workspace
-            </a>
-            <a
-              href="#hub"
-              onClick={(e) => {
-                scrollToSection(e, "hub");
-                setIsOpen(false);
-              }}
-              className="hover:text-blue-700"
-            >
-              Hub
-            </a>
-            <a
-              href="#our-team"
-              onClick={(e) => {
-                scrollToSection(e, "our-team");
-                setIsOpen(false);
-              }}
-              className="hover:text-blue-700"
-            >
-              Our Team
-            </a>
-
-            <button className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
-              Try Volt AI Now
-            </button>
-          </div>
+          <button onClick={() => setIsOpen(false)} aria-label="Close menu">
+            <X size={28} />
+          </button>
         </div>
-      )}
+
+        {/* Menu Items */}
+        <div className="flex flex-col items-center justify-center flex-1 gap-6 text-lg font-medium text-gray-700">
+          <a
+            href="#features"
+            onClick={(e) => scrollToSection(e, "features")}
+            className="hover:text-blue-700"
+          >
+            Features
+          </a>
+          <a
+            href="#discover"
+            onClick={(e) => scrollToSection(e, "discover")}
+            className="hover:text-blue-700"
+          >
+            Discover
+          </a>
+          <a
+            href="#workspace"
+            onClick={(e) => scrollToSection(e, "workspace")}
+            className="hover:text-blue-700"
+          >
+            Workspace
+          </a>
+          <a
+            href="#hub"
+            onClick={(e) => scrollToSection(e, "hub")}
+            className="hover:text-blue-700"
+          >
+            Hub
+          </a>
+          <a
+            href="#our-team"
+            onClick={(e) => scrollToSection(e, "our-team")}
+            className="hover:text-blue-700"
+          >
+            Our Team
+          </a>
+
+          <button className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+            Try Volt AI Now
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }
