@@ -4,11 +4,12 @@ import CollabrationSubCard from './CollabrationSubCard'
 
 export default function Collaboration() {
   return (
-
     <section className="py-16 bg-white" id="workspace">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-md md:max-w-lg sm:text-center z-50">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-center">Explore. Iterate. Automate.</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-center">
+            Explore. Iterate. Automate.
+          </h2>
           <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
             A powerful and easy-to-use AI workspace built for collaboration.
           </p>
@@ -24,10 +25,7 @@ export default function Collaboration() {
               <p className="mt-4 text-md font-medium text-center lg:text-left text-muted-foreground leading-[140%] w-full lg:w-[240px]">
                 Add, remove, or edit analysis steps as you work.
               </p>
-              <a
-                className="mt-1 lg:mt-2 mx-auto lg:mx-0 group w-fit "
-                href="#"
-              >
+              <a className="mt-1 lg:mt-2 mx-auto lg:mx-0 group w-fit " href="#">
                 <button
                   className="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-lg active:scale-95 duration-100 active:opacity-80 active:shadow-none h-9 group flex items-center text-card-foreground gap-1 w-fit bg-transparent hover:bg-transparent p-0 mt-1 lg:mt-2 mx-auto lg:mx-0"
                   data-event="landing_tertiary_cta"
@@ -71,10 +69,11 @@ export default function Collaboration() {
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
             <div className="relative bg-sidesecondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
               <h3 className="text-2xl text-center lg:text-left font-bold leading-none tracking-tight">
-                Reproducible results every time
+                Work Smarter, Not Harder
               </h3>
               <p className="mt-4 text-md font-medium text-center lg:text-left text-muted-foreground leading-[140%] w-full lg:w-[240px]">
-                Save your process and run it automatically every time.
+                Let AI handle the heavy lifting while you focus on insights that
+                matter.
               </p>
               <a className="mt-2 lg:mt-4 mx-auto lg:mx-0 group w-fit " href="#">
                 <button className="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-lg active:scale-95 duration-100 active:opacity-80 active:shadow-none h-9 group flex items-center text-card-foreground gap-1 w-fit bg-transparent hover:bg-transparent p-0 mt-2 lg:mt-4 mx-auto lg:mx-0">
@@ -112,10 +111,11 @@ export default function Collaboration() {
             </div>
             <div className="relative bg-secondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
               <h3 className="text-2xl text-center lg:text-left font-bold leading-none tracking-tight">
-                Reproducible results every time
+                Insights You Can Rely On
               </h3>
               <p className="mt-4 text-md font-medium text-center lg:text-left text-muted-foreground leading-[140%] w-full lg:w-[240px]">
-                Save your process and run it automatically every time.
+                Harness AI to deliver accurate, repeatable, and bias-free
+                analysis every time.
               </p>
               <a className="mt-2 lg:mt-4 mx-auto lg:mx-0 group w-fit" href="#">
                 <button className="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 rounded-lg active:scale-95 duration-100 active:opacity-80 active:shadow-none h-9 group flex items-center text-card-foreground gap-1 w-fit bg-transparent hover:bg-transparent p-0 mt-2 lg:mt-4 mx-auto lg:mx-0">
