@@ -14,17 +14,17 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Features/>
-    <WorkspaceFeatures/>
-    <Collaboration/>
-    <TeamUp/>
-    <CTA/>
-    <TeamSection/>
-    <Footer/>
+      <Navbar />
+      <Hero />
+      <Features />
+      <WorkspaceFeatures />
+      <Collaboration />
+      <TeamUp />
+      <TeamSection />
+      <CTA />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default App

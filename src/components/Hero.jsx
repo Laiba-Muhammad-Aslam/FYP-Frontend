@@ -28,7 +28,7 @@ export default function Hero() {
         analyze SQL databases through conversational interfaces
       </h4>
       <button className="cursor-pointer flex bg-[#2563eb] hover:bg-blue-800 transition py-2 md:py-3 text-white font-medium rounded-lg px-3 md:px-6">
-        Try Julius free <ChevronRight />
+        See Volt AI In Action <ChevronRight />
       </button>
     </section>
   );

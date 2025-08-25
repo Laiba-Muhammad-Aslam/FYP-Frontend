@@ -85,6 +85,25 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+
+    if (sectionId === "#" || !sectionId) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offsetTop = element.offsetTop - 64; // Navbar height offset
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
+    setIsOpen(false); // Close mobile menu if open
+  };
+  
+
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,8 +119,9 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8 font-semibold text-gray-700">
-            <a href="#" className="hover:text-blue-700">
-              Product
+            
+            <a href="#features" onClick={(e) => scrollToSection(e, 'features')} className="hover:text-blue-700">
+              Features
             </a>
             <a href="#" className="hover:text-blue-700">
               Use Cases

@@ -36,25 +36,25 @@ export default function WorkspaceFeatures() {
           Results in seconds, not hours
         </h1>
         <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10">
-          Ask for what you want and Julius analyzes the data for you
+          Ask for what you want & Volt AI analyzes the data for you
         </p>
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-3">
           <WorkspaceFeaturesCard
-            imgUrl="https://wpdatatables.com/wp-content/uploads/2020/08/chart5.jpg"
+            imgUrl={"src/assets/features/feature_7.png"}
             title="Connect all your data sources"
             desc="Connect with data sources like databases, spreadsheets, and more"
           />
 
           <WorkspaceFeaturesCard
-            imgUrl="https://wpdatatables.com/wp-content/uploads/2020/08/chart5.jpg"
+            imgUrl={"src/assets/features/feature_8.png"}
             title="Ask for analysis"
-            desc="You provide the questions, Julius handles the analysis"
+            desc="You provide the questions, Volt AI handles the analysis"
           />
 
           <WorkspaceFeaturesCard
-            imgUrl="https://wpdatatables.com/wp-content/uploads/2020/08/chart5.jpg"
+            imgUrl={"src/assets/features/feature_9.png"}
             title="Get results, instantly"
             desc="Choose from charts, tables or full reports tailored to your data"
           />
@@ -62,8 +62,8 @@ export default function WorkspaceFeatures() {
 
         {/* CTA */}
         <div className="mt-10">
-          <button className="flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto">
-            Get Started for free <ChevronRight />
+          <button className="flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto cursor-pointer">
+            Get instant insights <ChevronRight />
           </button>
         </div>
       </div>
