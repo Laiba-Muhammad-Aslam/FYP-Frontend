@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className='bg-[#ffffff] flex flex-col justify-center p-4 border-t border-gray-200 md:mt-5 mt-4 pt-15'>
+    <div className='bg-[#ffffff] flex flex-col justify-center p-4 border-t border-gray-200 pt-20 pb-10'>
       <div className='text-center font-bold text-3xl pb-4 cursor-pointer'>
         <img
               src={'src/assets/logo_black.svg'}
