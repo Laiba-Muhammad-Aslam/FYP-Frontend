@@ -1,56 +1,57 @@
 const team = [
   {
-    name: "Laiba Muhammad Aslam",
+    name: "Laiba M. Aslam",
     role: "Software Engineer",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg", // replace with actual image
+    img: "src/assets/team/kamil.png", // replace with actual image
     description:
       "Laiba is a Software Engineer with over 2 years of implementing leading-edge technologies including Cloud, AI/ML and Data & Analytics.", // Intro
   },
   {
     name: "Kamil Raza",
-    role: "Enterprise Solutions Expert",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg", // replace with actual image
+    role: "Software Engineer",
+    img: "src/assets/team/kamil.png", // replace with actual image
     description:
-      "Kamil's experience ranges from building successful enterprise-grade ERPs to eCommerce platforms serving over a million users per month.", // Intro
+      "I'm Kamil Raza. A web maestro with a heart that beats in lines of code and a mind that dreams in vibrant designs.", // Intro
   },
   {
-    name: "Muhammad Ausaf Jamal",
-    role: "Software Engineer & Consultant",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg", // replace with actual image
+    name: "M. Ausaf Jamal",
+    role: "Software Engineer",
+    img: "src/assets/team/kamil.png", // replace with actual image
     description:
       "Ausaf has experience in software engineering, strategy consulting, and product management internationally.", // Intro
   },
   {
     name: "Hamza Ali Shah",
-    role: "SaaS Solutions Expert",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg", // replace with actual image
+    role: "Technical Consultant",
+    img: "src/assets/team/kamil.png", // replace with actual image
     description:
-      "Hamza has experience building SaaS solutions, enterprise solutions, ERP systems, eCommerce stores, and bespoke software.", // Intro
+      "Hamza has experience in software engineering, strategy consulting, and product management internationally", // Intro
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="our-team">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12 md:text-[36px] text-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-4 md:text-[36px] text-[#020817]">
           Meet Our Team
         </h2>
+        <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
+          Volt AI is our Final Year Project—a culmination of our computer
+          science journey. We've built a platform that bridges complex SQL
+          queries and simple conversations using advanced AI, turning our
+          academic knowledge into a practical solution.
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {team.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow hover:shadow-2xl transition"
+              className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow transition"
             >
-              {/* <img
+              <img
                 src={member.img}
                 alt={member.name}
-                className="w-42 h-42 rounded-full object-cover border-5 border-transparent hover:border-[#2563eb] transition mb-4"
-              /> */}
-               <img
-                src={member.img}
-                alt={member.name}
-                className="w-50 h-50 rounded-lg object-cover border-5 border-transparent hover:border-[#2563eb] transition mb-4"
+                className="w-full h-70 rounded-lg object-cover border-5 border-transparent hover:border-[#2563eb] transition mb-4 cursor-pointer"
               />
               <h3 className="text-xl font-semibold text-[#2563eb] mb-1">
                 {member.name}

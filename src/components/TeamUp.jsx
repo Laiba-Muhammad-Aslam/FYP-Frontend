@@ -4,7 +4,7 @@ import { Settings2, Users, ShieldCheck } from "lucide-react";
 
 export default function TeamUp() {
   return (
-    <div className='py-2 md:py-4 flex justify-center items-center flex-col mt-3 md:mt-15'>
+    <div className='py-2 md:py-4 flex justify-center items-center flex-col mt-3 md:mt-15' id='hub'>
       <h1 className='text-2xl md:text-4xl font-bold text-center'>All your controls in one place</h1>
       <p className='text-center p-3 md:p-4 text-xl text-[#404040]'>Volt AI is your team's AI analyst that moves work forward.</p>
 

@@ -111,39 +111,55 @@ export default function Navbar() {
           {/* Logo */}
           <div className="text-[#2563eb] font-bold text-xl cursor-pointer">
             <img
-              src={'src/assets/logo_black.svg'}
-              alt="Julius Logo"
+              src={"src/assets/logo_black.svg"}
+              alt="Volt AI Logo"
               className="h-8 w-auto" // Adjust height as needed
             />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8 font-semibold text-gray-700">
-            
-            <a href="#features" onClick={(e) => scrollToSection(e, 'features')} className="hover:text-blue-700">
+            <a
+              href="#features"
+              onClick={(e) => scrollToSection(e, "features")}
+              className="hover:text-blue-700"
+            >
               Features
             </a>
-            <a href="#" className="hover:text-blue-700">
-              Use Cases
+            <a
+              href="#discover"
+              onClick={(e) => scrollToSection(e, "discover")}
+              className="hover:text-blue-700"
+            >
+              Discover
             </a>
-            <a href="#" className="hover:text-blue-700">
-              Resources
+            <a
+              href="#workspace"
+              onClick={(e) => scrollToSection(e, "workspace")}
+              className="hover:text-blue-700"
+            >
+              Workspace
             </a>
-            <a href="#" className="hover:text-blue-700">
-              Security
+            <a
+              href="#hub"
+              onClick={(e) => scrollToSection(e, "hub")}
+              className="hover:text-blue-700"
+            >
+              Hub
             </a>
-            <a href="#" className="hover:text-blue-700">
-              Community
-            </a>
-            <a href="#" className="hover:text-blue-700">
-              Pricing
+            <a
+              href="#our-team"
+              onClick={(e) => scrollToSection(e, "our-team")}
+              className="hover:text-blue-700"
+            >
+              Our Team
             </a>
           </div>
 
           {/* Desktop Button */}
           <div className="hidden lg:block">
             <button className="bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
-              Sign Up
+              Try Volt AI Now
             </button>
           </div>
 
@@ -164,7 +180,13 @@ export default function Navbar() {
         <div className="fixed inset-0 bg-white flex flex-col z-40">
           {/* Header inside menu */}
           <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-            <div className="text-[#2563eb] font-bold text-xl">Julius</div>
+            <div className="text-[#2563eb] font-bold text-xl">
+              <img
+                src={"src/assets/logo_black.svg"}
+                alt="Volt AI Logo"
+                className="h-8 w-auto" // Adjust height as needed
+              />
+            </div>
             <button onClick={() => setIsOpen(false)}>
               <X size={28} />
             </button>
@@ -173,50 +195,58 @@ export default function Navbar() {
           {/* Menu Items */}
           <div className="flex flex-col items-center justify-center flex-1 gap-6 text-lg font-medium text-gray-700">
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
+              href="#features"
+              onClick={(e) => {
+                scrollToSection(e, "features");
+                setIsOpen(false);
+              }}
               className="hover:text-blue-700"
             >
-              Product
+              Features
             </a>
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
+              href="#discover"
+              onClick={(e) => {
+                scrollToSection(e, "discover");
+                setIsOpen(false);
+              }}
               className="hover:text-blue-700"
             >
-              Use Cases
+              Discover
             </a>
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
+              href="#workspace"
+              onClick={(e) => {
+                scrollToSection(e, "workspace");
+                setIsOpen(false);
+              }}
               className="hover:text-blue-700"
             >
-              Resources
+              Workspace
             </a>
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
+              href="#hub"
+              onClick={(e) => {
+                scrollToSection(e, "hub");
+                setIsOpen(false);
+              }}
               className="hover:text-blue-700"
             >
-              Security
+              Hub
             </a>
             <a
-              href="#"
-              onClick={() => setIsOpen(false)}
+              href="#our-team"
+              onClick={(e) => {
+                scrollToSection(e, "our-team");
+                setIsOpen(false);
+              }}
               className="hover:text-blue-700"
             >
-              Community
-            </a>
-            <a
-              href="#"
-              onClick={() => setIsOpen(false)}
-              className="hover:text-blue-700"
-            >
-              Pricing
+              Our Team
             </a>
 
             <button className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
-              Sign Up
+              Try Volt AI Now
             </button>
           </div>
         </div>

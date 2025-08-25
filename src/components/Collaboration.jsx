@@ -25,7 +25,7 @@ import CollabrationSubCard from './CollabrationSubCard'
 
 export default function Collaboration() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="workspace">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         {/* Header */}
         <div className="text-center mb-10">

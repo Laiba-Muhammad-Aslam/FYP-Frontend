@@ -29,7 +29,7 @@ import { ChevronRight } from "lucide-react";
 
 export default function WorkspaceFeatures() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="discover">
       <div className="max-w-7xl mx-auto px-5 md:px-10 text-center">
         {/* Heading */}
         <h1 className="text-2xl md:text-4xl font-bold mb-3">
