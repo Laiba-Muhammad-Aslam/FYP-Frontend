@@ -8,8 +8,8 @@ export default function Collaboration() {
     <section className="py-16 bg-white" id="workspace">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-md md:max-w-lg sm:text-center z-50">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3">Explore. Iterate. Automate.</h2>
-          <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-center">Explore. Iterate. Automate.</h2>
+          <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
             A powerful and easy-to-use AI workspace built for collaboration.
           </p>
         </div>

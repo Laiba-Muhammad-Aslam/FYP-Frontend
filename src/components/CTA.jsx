@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 export default function CTA() {
   return (
     <section
-      className="mt-4 flex justify-center items-center h-50 md:h-90"
+      className="mt-4 flex justify-center items-center p-7 md:p-20"
       style={{
         backgroundImage: `url('src/assets/cta_footer.webp')`,
         backgroundSize: "cover",
@@ -13,7 +13,7 @@ export default function CTA() {
       }}
     >
       <div className="flex justify-center items-center flex-col p-5">
-        <h1 className="text-2xl md:text-[60px] font-[700] pb-2 md:pb-3 md:tracking-tighter">
+        <h1 className="text-2xl md:text-[60px] font-[700] pb-2 md:pb-3 md:tracking-tighter text-center">
           Start analyzing smarter, not harder
         </h1>
         <p className="text-center text-xl md:tracking-tight md:font-medium md:text-[24px] pb-3 md:pb-6 font-medium text-[#404040]">

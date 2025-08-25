@@ -2,28 +2,28 @@ const team = [
   {
     name: "Laiba M. Aslam",
     role: "Software Engineer",
-    img: "src/assets/team/laiba.png", 
+    img: "src/assets/team/laiba.png",
     description:
-      "I'm Laiba Muhammad Aslam, a Software Engineer who writes logic with purpose and builds experiences that connect people with technology.", 
-  },
-  {
-    name: "Kamil Raza",
-    role: "Software Engineer",
-    img: "src/assets/team/kamil.png", 
-    description:
-      "I'm Kamil Raza. A web maestro with a heart that beats in lines of code and a mind that dreams in vibrant designs.", 
+      "I'm Laiba M. Aslam, a Software Engineer who writes purposeful logic and builds experiences connecting people to tech.",
   },
   {
     name: "M. Ausaf Jamal",
     role: "Software Engineer",
-    img: "src/assets/team/ausaf.png", 
+    img: "src/assets/team/ausaf.png",
     description:
-      "Ausaf has experience in software engineering, strategy consulting, and product management internationally.", // Intro
+      "M. Ausaf Jamal — A digital architect whose mind speaks in algorithms and passion flows through innovative loops.", // Intro
+  },
+  {
+    name: "Kamil Raza",
+    role: "Software Engineer",
+    img: "src/assets/team/kamil.png",
+    description:
+      "I'm Kamil Raza. A web maestro with a heart that beats in lines of code and a mind that dreams in vibrant designs.",
   },
   {
     name: "Hamza Ali Shah",
     role: "Technical Consultant",
-    img: "src/assets/team/kamil.png", // replace with actual image
+    img: "src/assets/team/Hamza.png", // replace with actual image
     description:
       "Hamza has experience in software engineering, strategy consulting, and product management internationally", // Intro
   },

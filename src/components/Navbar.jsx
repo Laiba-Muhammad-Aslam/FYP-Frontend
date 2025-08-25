@@ -107,7 +107,7 @@ export default function Navbar() {
         aria-hidden={!isOpen}
       >
         {/* Header inside menu */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+        <div className="flex items-center justify-between px-4 border-b border-gray-200 h-16">
           <div className="text-[#2563eb] font-bold text-xl">
             <img
               src={"src/assets/logo_black.svg"}

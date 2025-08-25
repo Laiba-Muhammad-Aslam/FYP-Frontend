@@ -16,7 +16,7 @@ export default function Hero() {
         <button className="bg-blue-700 hover:bg-blue-800 transition text-white rounded-4xl px-2 py-1 text-sm font-medium">
           Boom
         </button>
-        <p className="flex font-[600] text-[12px] md:text-[16px]">
+        <p className="flex font-[600] text-[12px] md:text-[16px] items-center">
           No SQL expertise required <ChevronRight />
         </p>
       </div>
