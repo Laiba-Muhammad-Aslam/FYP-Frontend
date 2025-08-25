@@ -3,3 +3,15 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+  :root {
+  --secondary: 210 40% 96.1%;
+      --sidesecondary: 0 0% 96%;
+
+}
+  .bg-secondary {
+    background-color: hsl(var(--secondary));
+}
+.bg-sidesecondary {
+    background-color: hsl(var(--sidesecondary));
+}
