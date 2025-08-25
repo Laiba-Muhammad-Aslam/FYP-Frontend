@@ -7,7 +7,7 @@ export default function Footer() {
         <img
               src={'src/assets/logo_black.svg'}
               alt="Volt AI Logo"
-              className="h-8 w-auto mx-auto" // Adjust height as needed
+              className="h-8 w-auto mx-auto" 
         />
       </div>
       <div className='flex flex-col md:text-[14px] md:flex-row justify-center items-center gap-10 font-medium p-8 md:p-10 text-[#64748bcc]'>
