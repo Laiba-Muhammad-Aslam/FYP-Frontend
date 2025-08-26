@@ -13,42 +13,42 @@ export default function Features() {
           icon={<Zap size={30} color="#2563eb" />}
           title="Start in seconds, not hours"
           des="No coding or complex setup required"
-          imgUrl={"public/assets/features/feature_1.webp"}
+          imgUrl={"/assets/features/feature_1.webp"}
         />
 
         <FeatureCard
           icon={<CloudUpload size={30} color="#2563eb" />}
           title="Upload everything at once"
           des="No limits, no waiting. Volt AI supports larger SQL files compared to others"
-          imgUrl={"public/assets/features/feature_2.webp"}
+          imgUrl={"/assets/features/feature_2.webp"}
         />
 
         <FeatureCard
           icon={<ChartColumn size={30} color="#2563eb" />}
           title="Create stunning charts instantly"
           des="Turn your data into clear visuals that explain your findings"
-          imgUrl={"public/assets/features/feature_3.webp"}
+          imgUrl={"/assets/features/feature_3.webp"}
         />
 
         <FeatureCard
           icon={<Code size={30} color="#2563eb" />}
           title="A place for every team"
           des="Collaborate in real time to uncover insights instantly."
-          imgUrl={"public/assets/features/feature_4.webp"}
+          imgUrl={"/assets/features/feature_4.webp"}
         />
 
         <FeatureCard
           icon={<Brain size={30} color="#2563eb" />}
           title="Tackle problems generic AI can’t"
           des="Built with advanced capabilities to solve complex data analysis problems"
-          imgUrl={"public/assets/features/feature_5.webp"}
+          imgUrl={"/assets/features/feature_5.webp"}
         />
 
         <FeatureCard
           icon={<History size={30} color="#2563eb" />}
           title="Skip repetitive explanations"
           des="Volt AI table names and preferences to work faster over time"
-          imgUrl={"public/assets/features/feature_6.webp"}
+          imgUrl={"/assets/features/feature_6.webp"}
         />
       </div>
     </section>

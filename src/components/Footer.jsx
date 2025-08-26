@@ -5,7 +5,7 @@ export default function Footer() {
     <div className='bg-[#ffffff] flex flex-col justify-center p-4 border-t border-gray-200 pt-20 pb-10'>
       <div className='text-center font-bold text-3xl pb-4 cursor-pointer'>
         <img
-              public={'public/assets/logo_black.svg'}
+              src={'/assets/logo_black.svg'}
               alt="Volt AI Logo"
               className="h-8 w-auto mx-auto" 
         />

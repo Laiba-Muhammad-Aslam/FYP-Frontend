@@ -17,19 +17,19 @@ export default function WorkspaceFeatures() {
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-3">
           <WorkspaceFeaturesCard
-            imgUrl={"public/assets/features/feature_7.png"}
+            imgUrl={"/assets/features/feature_7.png"}
             title="Connect all your data sources"
             desc="Connect with data sources like databases, spreadsheets, and more"
           />
 
           <WorkspaceFeaturesCard
-            imgUrl={"public/assets/features/feature_8.png"}
+            imgUrl={"/assets/features/feature_8.png"}
             title="Ask for analysis"
             desc="You provide the questions, Volt AI handles the analysis"
           />
 
           <WorkspaceFeaturesCard
-            imgUrl={"public/assets/features/feature_9.png"}
+            imgUrl={"/assets/features/feature_9.png"}
             title="Get results, instantly"
             desc="Choose from charts, tables or full reports tailored to your data"
           />
