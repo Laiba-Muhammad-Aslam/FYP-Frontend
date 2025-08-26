@@ -6,7 +6,7 @@ export default function CTA() {
     <section
       className="mt-4 flex justify-center items-center p-7 md:p-20"
       style={{
-        backgroundImage: `url('src/assets/cta_footer.webp')`,
+        backgroundImage: `url('public/assets/cta_footer.webp')`,
         backgroundSize: "cover",
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",

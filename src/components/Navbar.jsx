@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="text-[#2563eb] font-bold text-xl cursor-pointer">
             <img
-              src={"src/assets/logo_black.svg"}
+              public={"public/assets/logo_black.svg"}
               alt="Volt AI Logo"
               className="h-8 w-auto" // Adjust height as needed
             />
@@ -110,7 +110,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-4 border-b border-gray-200 h-16">
           <div className="text-[#2563eb] font-bold text-xl">
             <img
-              src={"src/assets/logo_black.svg"}
+              public={"public/assets/logo_black.svg"}
               alt="Volt AI Logo"
               className="h-8 w-auto"
             />

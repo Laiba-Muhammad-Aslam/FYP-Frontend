@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       className="bg-[#ffffff] text-center flex flex-col justify-center items-center px-5 md:px-10 py-6 md:py-7 h-[calc(100vh-4rem)]"
       style={{
-        backgroundImage: `url('src/assets/hero_bg_1.png'), url('src/assets/hero_bg_2.png')`,
+        backgroundImage: `url('public/assets/hero_bg_1.png'), url('public/assets/hero_bg_2.png')`,
         backgroundSize: "cover, cover",
         backgroundPosition: "center center, bottom center",
         backgroundRepeat: "no-repeat, no-repeat",
