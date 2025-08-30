@@ -1,5 +1,6 @@
 import React from 'react'
 import { ChevronRight } from 'lucide-react';
+import { redirectUserToUrl } from '../utility';
 
 export default function CTA() {
   return (
@@ -20,7 +21,7 @@ export default function CTA() {
           Join the future of data analysis. Let AI unlock insights from your SQL
           databases in seconds.
         </p>
-        <button className="cursor-pointer md:font-[600] md:text-[18px] flex bg-[#2563eb] hover:bg-blue-800 transition py-2 text-white font-medium rounded-md px-5">
+        <button onClick={() => redirectUserToUrl()} className="cursor-pointer md:font-[600] md:text-[18px] flex bg-[#2563eb] hover:bg-blue-800 transition py-2 text-white font-medium rounded-md px-5">
           Try Volt AI <ChevronRight />
         </button>
       </div>
