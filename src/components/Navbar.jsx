@@ -78,7 +78,7 @@ export default function Navbar() {
 
           {/* Desktop Button */}
           <div className="hidden lg:block">
-            <button onClick={() => redirectUserToUrl()} className="bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
+            <button onClick={() => redirectUserToUrl()} className="cursor-pointer bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
               Try Volt AI Now
             </button>
           </div>
@@ -158,8 +158,8 @@ export default function Navbar() {
             Our Team
           </a>
 
-          <button onClick={()=>redirectUserToUrl()} className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
-            Try Volt AI Nowwwwwwwww
+          <button onClick={()=>redirectUserToUrl()} className="cursor-pointer bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+            Try Volt AI Now
           </button>
         </div>
       </div>
