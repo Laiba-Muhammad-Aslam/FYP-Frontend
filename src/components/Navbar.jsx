@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { redirectUserToUrl } from '../utility';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Navbar() {
     }
     setIsOpen(false); // Close mobile menu if open
   };
-  
+
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
@@ -77,7 +78,7 @@ export default function Navbar() {
 
           {/* Desktop Button */}
           <div className="hidden lg:block">
-            <button className="bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
+            <button onClick={() => redirectUserToUrl()} className="cursor-pointer bg-[#2563eb] text-white px-5 py-2 rounded-md font-medium hover:bg-blue-800 transition">
               Try Volt AI Now
             </button>
           </div>
@@ -99,11 +100,10 @@ export default function Navbar() {
       {/* Mobile Menu (animated fade-down) */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-40 bg-white flex flex-col transition-all duration-300 ease-out ${
-          isOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-white flex flex-col transition-all duration-300 ease-out ${isOpen
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-4 pointer-events-none"
+          }`}
         aria-hidden={!isOpen}
       >
         {/* Header inside menu */}
@@ -158,7 +158,7 @@ export default function Navbar() {
             Our Team
           </a>
 
-          <button className="bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+          <button onClick={()=>redirectUserToUrl()} className="cursor-pointer bg-[#2563eb] text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
             Try Volt AI Now
           </button>
         </div>

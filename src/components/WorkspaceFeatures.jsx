@@ -1,6 +1,7 @@
 import React from "react";
 import WorkspaceFeaturesCard from "./WorkspaceFeaturesCard";
 import { ChevronRight } from "lucide-react";
+import { redirectUserToUrl } from '../utility';
 
 export default function WorkspaceFeatures() {
   return (
@@ -37,7 +38,7 @@ export default function WorkspaceFeatures() {
 
         {/* CTA */}
         <div className="mt-10">
-          <button className="flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto cursor-pointer">
+          <button onClick={() => redirectUserToUrl()} className="flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto cursor-pointer">
             Get instant insights <ChevronRight />
           </button>
         </div>
