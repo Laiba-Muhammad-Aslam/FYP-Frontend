@@ -1,9 +1,20 @@
+import { useRef } from "react";
 import FeatureCard from "./FeatureCard";
 import { Zap, Activity, CloudUpload, ChartColumn, Code, Brain, History } from 'lucide-react';
+import { useFade } from "../hooks/useFade";
 
 export default function Features() {
+  const heroRef = useRef(null);
+
+  // Apply fade animations
+  useFade(heroRef, {
+    trigger: "scroll",
+    duration: 1.5,
+    delay: 0.05
+  });
   return (
-    <section className="py-16 bg-white" id="features">
+    <section       ref={heroRef}
+ className="py-16 bg-white" id="features">
       <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-none max-w-[32rem] sm:max-w-[36rem] md:max-w-[42rem] lg:max-w-[48rem] mx-auto px-4 text-center text-[#020817] pb-15">
         Intuitive and easy to use
       </h1>

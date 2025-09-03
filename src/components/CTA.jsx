@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { ChevronRight } from 'lucide-react';
 import { redirectUserToUrl } from '../utility';
+import { useFade } from '../hooks/useFade';
 
 export default function CTA() {
+  const heroRef = useRef(null);
+
+  // Apply fade animations
+  useFade(heroRef, {
+    trigger: "scroll",
+    duration: 1.5,
+    delay: 0.05
+  });
   return (
     <section
+    ref={heroRef}
       className="mt-4 flex justify-center items-center p-7 md:p-20"
       style={{
         backgroundImage: `url('/assets/cta_footer.webp')`,

@@ -1,3 +1,6 @@
+import { useRef } from "react";
+import { useFade } from "../hooks/useFade";
+
 const team = [
   {
     name: "Laiba M. Aslam",
@@ -30,8 +33,17 @@ const team = [
 ];
 
 export default function TeamSection() {
+  const heroRef = useRef(null);
+
+  // Apply fade animations
+  useFade(heroRef, {
+    trigger: "scroll",
+    duration: 1.5,
+    delay: 0.05
+  });
   return (
-    <section className="py-16 bg-white" id="our-team">
+    <section       ref={heroRef}
+ className="py-16 bg-white" id="our-team">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-4 md:text-[36px] text-[#020817]">
           Meet Our Team

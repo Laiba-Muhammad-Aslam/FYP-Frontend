@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import WorkspaceFeaturesCard from "./WorkspaceFeaturesCard";
 import { ChevronRight } from "lucide-react";
 import { redirectUserToUrl } from '../utility';
+import { useFade } from "../hooks/useFade";
 
 export default function WorkspaceFeatures() {
+  const heroRef = useRef(null);
+
+  // Apply fade animations
+  useFade(heroRef, {
+    trigger: "scroll",
+    duration: 1,
+    delay: 0.05
+  });
   return (
-    <section className="py-16 bg-white" id="discover">
+    <section ref={heroRef}
+      className="py-16 bg-white" id="discover">
       <div className="max-w-7xl mx-auto px-5 md:px-10 text-center">
         {/* Heading */}
         <h1 className="text-2xl md:text-4xl font-bold mb-3">

@@ -1,9 +1,21 @@
 import { ChevronRight } from 'lucide-react';
 import { redirectUserToUrl } from '../utility';
+import { useRef } from 'react';
+import { useFade } from '../hooks/useFade';
 
 export default function Hero() {
+  const heroRef = useRef(null);
+
+  // Apply fade animations
+  useFade(heroRef, {
+    trigger: "load",
+    duration: 1.5,
+    y: 0,
+    delay: 0.05
+  });
   return (
     <section
+      ref={heroRef}
       className="bg-[#ffffff] text-center flex flex-col justify-center items-center px-5 md:px-10 py-6 md:py-7 h-[calc(100vh-4rem)]"
       style={{
         backgroundImage: `url('/assets/hero_bg_1.png'), url('/assets/hero_bg_2.png')`,
