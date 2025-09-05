@@ -1,5 +1,8 @@
-import { useRef } from "react";
-import { useFade } from "../hooks/useFade";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const team = [
   {
@@ -14,7 +17,7 @@ const team = [
     role: "Software Engineer",
     img: "/assets/team/ausaf.png",
     description:
-      "M. Ausaf Jamal — A digital architect whose mind speaks in algorithms and passion flows through innovative loops.", // Intro
+      "M. Ausaf Jamal — A digital architect whose mind speaks in algorithms and passion flows through innovative loops.",
   },
   {
     name: "Kamil Raza",
@@ -26,39 +29,72 @@ const team = [
   {
     name: "Hamza Ali Shah",
     role: "Technical Consultant",
-    img: "/assets/team/Hamza.png", // replace with actual image
+    img: "/assets/team/Hamza.png",
     description:
-      "Hamza has experience in software engineering, strategy consulting, and product management internationally", // Intro
+      "Hamza has experience in software engineering, strategy consulting, and product management internationally",
   },
 ];
 
 export default function TeamSection() {
-  const heroRef = useRef(null);
+  const sectionRef = useRef(null);
 
-  // Apply fade animations
-  useFade(heroRef, {
-    trigger: "scroll",
-    duration: 1.5,
-    delay: 0.05
-  });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Hide everything first to prevent flicker
+      gsap.set([".team-heading", ".team-subheading", ".team-card"], {
+        autoAlpha: 0,
+        y: 40,
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play reverse play reverse", // replay on scroll
+        },
+        defaults: { ease: "power2.out", duration: 0.8 },
+      });
+
+      // Heading
+      tl.to(".team-heading", { autoAlpha: 1, y: 0 });
+
+      // Subheading
+      tl.to(".team-subheading", { autoAlpha: 1, y: 0 }, "+=0.2");
+
+      // Cards sequential
+      tl.to(".team-card", {
+        autoAlpha: 1,
+        y: 0,
+        stagger: 0.2,
+      }, "+=0.2");
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+
   return (
-    <section       ref={heroRef}
- className="py-16 bg-white" id="our-team">
+    <section ref={sectionRef} className="py-16 bg-white" id="our-team">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-4 md:text-[36px] text-[#020817]">
+        {/* Heading */}
+        <h2 className="team-heading text-3xl font-bold text-center mb-4 md:text-[36px] text-[#020817]">
           Meet Our Team
         </h2>
-        <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
+
+        {/* Subheading */}
+        <p className="team-subheading text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
           Volt AI is our Final Year Project—a culmination of our computer
           science journey. We've built a platform that bridges complex SQL
           queries and simple conversations using advanced AI, turning our
           academic knowledge into a practical solution.
         </p>
+
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {team.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow transition"
+              className="team-card flex flex-col items-center text-center p-6 bg-white rounded-2xl shadow transition"
             >
               <img
                 src={member.img}
