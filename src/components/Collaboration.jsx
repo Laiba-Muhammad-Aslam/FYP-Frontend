@@ -1,33 +1,59 @@
-import React, { useRef } from 'react'
-import CollaborationCard from './CollaborationCard'
-import CollabrationSubCard from './CollabrationSubCard'
-import { useFade } from '../hooks/useFade';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Collaboration() {
-  const heroRef = useRef(null);
+  const sectionRef = useRef(null);
 
-  // Apply fade animations
-  useFade(heroRef, {
-    trigger: "scroll",
-    duration: 1,
-    delay: 0.05
-  });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%", // when section enters viewport
+          toggleActions: "play none none none", // play once
+        },
+        defaults: { ease: "power3.out", duration: 1 },
+      });
+
+      // Heading
+      tl.from(".collab-heading", { opacity: 0, y: 30 });
+
+      // Subheading
+      tl.from(".collab-subheading", { opacity: 0, y: 30 }, "-=0.5");
+
+      // Cards (staggered one by one)
+      tl.from(
+        ".collab-card",
+        {
+          opacity: 0,
+          y: 50,
+          stagger: 0.3,
+        },
+        "-=0.2"
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section       ref={heroRef}
- className="py-16 bg-white" id="workspace">
+    <section ref={sectionRef} className="py-16 bg-white" id="workspace">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-md md:max-w-lg sm:text-center z-50">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3 text-center">
+          <h2 className="collab-heading text-2xl md:text-4xl font-bold mb-3 text-center">
             Explore. Iterate. Automate.
           </h2>
-          <p className="text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
+          <p className="collab-subheading text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10 text-center">
             A powerful and easy-to-use AI workspace built for collaboration.
           </p>
         </div>
 
         <div className="mx-auto mt-6 md:mt-8 flex flex-col max-w-2xl gap-4 text-sm lg:max-w-none">
           {/* Card 1 */}
-          <div className="relative bg-secondary lg:h-[448px] rounded-xl px-8 py-8 lg:py-10 lg:px-8 overflow-hidden">
+          <div className="collab-card relative bg-secondary lg:h-[448px] rounded-xl px-8 py-8 lg:py-10 lg:px-8 overflow-hidden">
             <div className="mb-8 flex flex-col justify-normal w-full lg:w-[300px] lg:h-full">
               <h3 className="text-2xl lg:text-4xl text-center lg:text-left font-bold mt-0 lg:mt-8 leading-none tracking-tight">
                 Flexible building blocks
@@ -77,7 +103,7 @@ export default function Collaboration() {
 
           {/* Card 2 */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
-            <div className="relative bg-sidesecondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
+            <div className="collab-card relative bg-sidesecondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
               <h3 className="text-2xl text-center lg:text-left font-bold leading-none tracking-tight">
                 Work Smarter, Not Harder
               </h3>
@@ -119,7 +145,7 @@ export default function Collaboration() {
                 src="https://julius.ai/_next/image?url=https%3A%2F%2Fjulius-public.s3.amazonaws.com%2Fpublic%2Fbenefits-manage.webp&w=750&q=50"
               />
             </div>
-            <div className="relative bg-secondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
+            <div className="collab-card relative bg-secondary h-[400px] lg:h-[448px] rounded-xl p-8 overflow-hidden">
               <h3 className="text-2xl text-center lg:text-left font-bold leading-none tracking-tight">
                 Insights You Can Rely On
               </h3>

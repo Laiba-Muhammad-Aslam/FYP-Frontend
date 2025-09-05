@@ -1,18 +1,29 @@
 import { ChevronRight } from 'lucide-react';
 import { redirectUserToUrl } from '../utility';
-import { useRef } from 'react';
-import { useFade } from '../hooks/useFade';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 export default function Hero() {
   const heroRef = useRef(null);
 
-  // Apply fade animations
-  useFade(heroRef, {
-    trigger: "load",
-    duration: 1.5,
-    y: 0,
-    delay: 0.05
-  });
+  useEffect(() => {
+    if (heroRef.current) {
+      const elements = heroRef.current.querySelectorAll('.fade-in'); // select all elements with fade-in class
+
+      gsap.fromTo(
+        elements,
+        { opacity: 0, y: 40 }, // start state
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: 'power2.out',
+          stagger: 0.3, // delay between each item
+        }
+      );
+    }
+  }, []);
+
   return (
     <section
       ref={heroRef}
@@ -25,7 +36,7 @@ export default function Hero() {
         backgroundBlendMode: "multiply",
       }}
     >
-      <div className="rounded-2xl flex gap-2 md:gap-3 m-4 mb-5 md:mb-5 bg-blue-100 px-1 py-1 md:py-2 items-center justify-between">
+      <div className="fade-in rounded-2xl flex gap-2 md:gap-3 m-4 mb-5 md:mb-5 bg-blue-100 px-1 py-1 md:py-2 items-center justify-between">
         <button className="bg-blue-700 hover:bg-blue-800 transition text-white rounded-4xl px-2 py-1 text-sm font-medium">
           Boom
         </button>
@@ -33,14 +44,20 @@ export default function Hero() {
           No SQL expertise required <ChevronRight />
         </p>
       </div>
-      <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none max-w-[32rem] sm:max-w-[36rem] md:max-w-[42rem] lg:max-w-[48rem] mx-auto px-4 text-center text-[#020817]">
+
+      <h1 className="fade-in text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-none max-w-[32rem] sm:max-w-[36rem] md:max-w-[42rem] lg:max-w-[48rem] mx-auto px-4 text-center text-[#020817]">
         Get expert analysis from your raw SQL data instantly.
       </h1>
-      <h4 className="text-lg lg:text-2xl md:text-xl font-medium py-4 text-[#404040] max-w-sm md:max-w-xl lg:max-w-2xl mx-auto">
+
+      <h4 className="fade-in text-lg lg:text-2xl md:text-xl font-medium py-4 text-[#404040] max-w-sm md:max-w-xl lg:max-w-2xl mx-auto">
         Simplifying complex data analysis by leveraging AI to interpret and
         analyze SQL databases through conversational interfaces
       </h4>
-      <button onClick={() => redirectUserToUrl()} className="cursor-pointer flex bg-[#2563eb] hover:bg-blue-800 transition py-2 md:py-3 text-white font-medium rounded-lg px-3 md:px-6">
+
+      <button
+        onClick={() => redirectUserToUrl()}
+        className="fade-in cursor-pointer flex bg-[#2563eb] hover:bg-blue-800 transition py-2 md:py-3 text-white font-medium rounded-lg px-3 md:px-6"
+      >
         See Volt AI In Action <ChevronRight />
       </button>
     </section>
