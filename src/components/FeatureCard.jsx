@@ -1,6 +1,6 @@
-export default function FeatureCard({ className, icon, title, des, imgUrl }) {
+export default function FeatureCard({ icon, title, des, imgUrl }) {
   return (
-    <div className={`${className} w-full bg-gray-100 flex flex-col items-start justify-between p-6 rounded-xl shadow-sm hover:shadow-md transition`}>
+    <div className={`h-full w-full bg-gray-100 flex flex-col items-start justify-between p-6 rounded-xl shadow-sm hover:shadow-md transition`}>
       <div>
         <p className="font-bold text-[#2563eb] text-2xl pb-2 md:pb-3">{icon}</p>
         <h1 className="font-bold md:text-[20px] text-xl text-[#020817]">{title}</h1>

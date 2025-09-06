@@ -12,65 +12,31 @@ export default function WorkspaceFeatures() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const heading = sectionRef.current.querySelector(".fade-heading");
-      const paragraph = sectionRef.current.querySelector(".fade-para");
-      const cards = sectionRef.current.querySelectorAll(".fade-card");
-      const cta = sectionRef.current.querySelector(".fade-cta");
-
-      // Animate heading
-      gsap.from(heading, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: heading,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      // Animate paragraph
-      gsap.from(paragraph, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power2.out",
-        delay: 0.1,
-        scrollTrigger: {
-          trigger: paragraph,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      // Animate cards in stagger
-      gsap.from(cards, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.2,
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
+          start: "top 80%",
+          toggleActions: "play none none reverse", // play once
         },
+        defaults: { ease: "power3.out", duration: 1 },
       });
 
-      // Animate CTA button
-      gsap.from(cta, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        ease: "power2.out",
-        delay: 0.2,
-        scrollTrigger: {
-          trigger: cta,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
+      // Heading
+      tl.from(".workspace-heading", { opacity: 0, y: 30 });
+
+      // Subheading
+      tl.from(".workspace-subheading", { opacity: 0, y: 30 }, "-=0.5");
+
+      // Cards (staggered)
+      tl.from(
+        ".workspace-card",
+        {
+          opacity: 0,
+          y: 50,
+          stagger: 0.3,
         },
-      });
+        "-=0.2"
+      );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -80,42 +46,51 @@ export default function WorkspaceFeatures() {
     <section ref={sectionRef} className="py-16 bg-white" id="discover">
       <div className="max-w-7xl mx-auto px-5 md:px-10 text-center">
         {/* Heading */}
-        <h1 className="fade-heading text-2xl md:text-4xl font-bold mb-3">
+        <h1 className="workspa-heading text-2xl md:text-4xl font-bold mb-3">
           Results in seconds, not hours
         </h1>
-        <p className="fade-para text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10">
+        <p className="workspace-para text-[#404040] md:text-lg font-medium max-w-2xl mx-auto mb-10">
           Ask for what you want & Volt AI analyzes the data for you
         </p>
 
         {/* Cards */}
         <div className="grid gap-6 md:grid-cols-3">
-          <WorkspaceFeaturesCard
-            className="fade-card"
-            imgUrl={"/assets/features/feature_7.png"}
-            title="Connect all your data sources"
-            desc="Connect with data sources like databases, spreadsheets, and more"
-          />
+          <div className="workspace-card">
 
-          <WorkspaceFeaturesCard
-            className="fade-card"
-            imgUrl={"/assets/features/feature_8.png"}
-            title="Ask for analysis"
-            desc="You provide the questions, Volt AI handles the analysis"
-          />
+            <WorkspaceFeaturesCard
+              imgUrl={"/assets/features/feature_7.png"}
+              title="Connect all your data sources"
+              desc="Connect with data sources like databases, spreadsheets, and more"
+            />
+          </div>
+          <div className="workspace-card">
 
-          <WorkspaceFeaturesCard
-            className="fade-card"
-            imgUrl={"/assets/features/feature_9.png"}
-            title="Get results, instantly"
-            desc="Choose from charts, tables or full reports tailored to your data"
-          />
+
+            <WorkspaceFeaturesCard
+              className="workspace-card"
+              imgUrl={"/assets/features/feature_8.png"}
+              title="Ask for analysis"
+              desc="You provide the questions, Volt AI handles the analysis"
+            />
+          </div>
+          <div className="workspace-card">
+
+
+
+            <WorkspaceFeaturesCard
+              className="workspace-card"
+              imgUrl={"/assets/features/feature_9.png"}
+              title="Get results, instantly"
+              desc="Choose from charts, tables or full reports tailored to your data"
+            />
+          </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-10">
+        <div className="workspace-cta mt-10">
           <button
             onClick={() => redirectUserToUrl()}
-            className="fade-cta flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto cursor-pointer"
+            className=" flex items-center gap-2 bg-[#2563eb] hover:bg-blue-800 transition text-white font-semibold text-base md:text-lg rounded-md px-6 py-2 mx-auto cursor-pointer"
           >
             Get instant insights <ChevronRight />
           </button>

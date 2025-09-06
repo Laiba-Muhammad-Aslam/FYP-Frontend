@@ -12,8 +12,8 @@ export default function Collaboration() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%", // when section enters viewport
-          toggleActions: "play none none none", // play once
+          start: "top 80%",
+          toggleActions: "play none none reverse", // play once
         },
         defaults: { ease: "power3.out", duration: 1 },
       });
@@ -24,7 +24,7 @@ export default function Collaboration() {
       // Subheading
       tl.from(".collab-subheading", { opacity: 0, y: 30 }, "-=0.5");
 
-      // Cards (staggered one by one)
+      // Cards (staggered)
       tl.from(
         ".collab-card",
         {
